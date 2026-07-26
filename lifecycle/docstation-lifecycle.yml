@@ -1,0 +1,13 @@
+generated: '2026-07-18'
+method: searched
+source: https://docstation.co/
+status_page: https://status.docstation.co
+product_updates: https://help.docstation.co
+versioning: null
+deprecation: null
+sla: null
+notes: >-
+  DocStation publishes a public system-status page (status.docstation.co) and a
+  "Product Updates" section in its help center, but no dated changelog entries,
+  versioning policy, or deprecation/Sunset policy were found on the public
+  surface. No public API means no OpenAPI-derived deprecated operations.

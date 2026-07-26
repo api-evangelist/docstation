@@ -1,0 +1,24 @@
+# DocStation
+
+> DocStation is a unified pharmacy care and medical billing platform that helps community and clinical pharmacies bill insurance for the clinical services they already provide — vaccines, MTM, point-of-care testing, consultations, and DME. It consolidates patient records, medical claims, scheduling, messaging, workflow automation, and revenue analytics into one HIPAA-compliant, SOC 2 Type II system. No public API is documented at this time; this profile is maintained by the API Evangelist network.
+
+## Product
+- [Platform overview](https://docstation.co/platform): Patient records, medical billing, smart scheduling, connected messaging, workflow automation, and live analytics.
+- [Pricing](https://docstation.co/pricing): Plan and pricing information.
+- [Get started / schedule a demo](https://docstation.co/get-started): Request a demo or start onboarding.
+- [Sign in](https://app.docstation.co): DocStation web application.
+
+## Docs & Support
+- [Help center](https://help.docstation.co): Getting started, training videos, medical billing, account management, advanced features, clinical programs, and product updates.
+- [Blog](https://docstation.co/blog): Company and product articles.
+
+## Trust & Status
+- [Trust center](https://trust.docstation.co): Security and compliance posture (HIPAA, SOC 2 Type II).
+- [System status](https://status.docstation.co): Live platform status.
+
+## Legal
+- [Terms of service](https://docstation.co/legal/terms-of-service)
+- [Privacy policy](https://docstation.co/legal/privacy-policy)
+
+## Network artifacts
+- [APIs.json profile](https://raw.githubusercontent.com/api-evangelist/docstation/refs/heads/main/apis.yml): API Evangelist network profile for DocStation.

@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://docstation.co/platform
+standards:
+- id: hipaa
+  conforms: true
+  evidence: 'Platform page: "Full HIPAA compliance with automated safeguards"'
+- id: soc2-type-ii
+  conforms: true
+  evidence: 'Platform page: "SOC 2 Type II — Independently audited security controls"'
+- id: tls-1.3
+  conforms: true
+  evidence: 'Platform page: "TLS 1.3 and 1.2 encryption for data in transit"; confirmed by live TLS probe (TLSv1.3).'
+- id: mfa
+  conforms: true
+  evidence: 'Platform page: "Optional MFA and role-based permissions"'
+- id: sso-jit
+  conforms: true
+  evidence: 'Platform page: "SSO with just-in-time user provisioning"'
+notes: >-
+  No public OpenAPI is available for DocStation, so cross-cutting API standards
+  (oauth2/oidc/rfc9457/pagination/idempotency) could not be derived. Standards
+  above are the published security/compliance posture searched from the public
+  platform page.

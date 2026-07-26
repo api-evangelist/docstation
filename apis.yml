@@ -1,7 +1,30 @@
 aid: docstation
 name: DocStation
-description: DocStation is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  DocStation is a unified pharmacy care and medical billing platform that helps
+  community and clinical pharmacies move beyond prescription dispensing to bill
+  insurance for the clinical services they already provide — vaccines, MTM,
+  point-of-care testing, consultations, and DME. The platform consolidates
+  360-degree patient records, automated medical claims generation and
+  resubmission, smart scheduling with public booking links, connected SMS and
+  organization-to-organization messaging, workflow automation, and live revenue
+  analytics into a single system. It integrates with pharmacy management systems
+  (PioneerRx, Liberty, DRX), 1,000+ health plans, clearinghouses, and state
+  immunization registries. DocStation is HIPAA compliant and SOC 2 Type II
+  audited. Backed by Techstars; added to the API Evangelist network and enriched
+  from its public surface. No public developer API is documented at this time.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://docstation.co/api/og?title=Pharmacy+Beyond+Pills.&label=DocStation&accent=blue
 url: https://raw.githubusercontent.com/api-evangelist/docstation/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +34,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Pharmacy
+- Medical Billing
+- Healthcare
+- Clinical Services
+- Patient Management
+- Scheduling
+- Insurance Claims
+- HIPAA
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +54,36 @@ maintainers:
 common:
 - type: Website
   url: https://docstation.co/
+- type: Support
+  url: https://help.docstation.co
+- type: Blog
+  url: https://docstation.co/blog
+- type: Pricing
+  url: https://docstation.co/pricing
+- type: SignUp
+  url: https://docstation.co/get-started
+- type: Login
+  url: https://app.docstation.co
+- type: TermsOfService
+  url: https://docstation.co/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://docstation.co/legal/privacy-policy
+- type: StatusPage
+  url: https://status.docstation.co
+- type: TrustCenter
+  url: https://trust.docstation.co
+- type: Compliance
+  url: https://docstation.co/platform
+- type: LLMsTxt
+  url: llms/docstation-llms.txt
+- type: Lifecycle
+  url: lifecycle/docstation-lifecycle.yml
+- type: Conformance
+  url: conformance/docstation-conformance.yml
+- type: DomainSecurity
+  url: security/docstation-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
