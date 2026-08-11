@@ -34,7 +34,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-10'
 tags:
 - Company
 - Pharmacy
@@ -56,6 +56,12 @@ common:
   url: https://docstation.co/
 - type: Support
   url: https://help.docstation.co
+- type: Documentation
+  url: https://help.docstation.co/en/
+- type: GettingStarted
+  url: https://help.docstation.co/en/collections/2461790-getting-started-with-docstation
+- type: GitHubOrganization
+  url: https://github.com/DocStation
 - type: Blog
   url: https://docstation.co/blog
 - type: Pricing
@@ -82,8 +88,35 @@ common:
   url: conformance/docstation-conformance.yml
 - type: DomainSecurity
   url: security/docstation-domain-security.yml
+- type: Security
+  url: security/docstation-vulnerability-disclosure.yml
+- type: VulnerabilityDisclosure
+  url: security/docstation-vulnerability-disclosure.yml
+- type: ChangeLog
+  url: changelog/docstation-changelog.yml
+- type: Plans
+  url: plans/docstation-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/docstation-rate-limits.yml
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    DocStation ships only an end-user pharmacy application — there is no
+    api.docstation.co (NXDOMAIN), no developer page in its 217-URL sitemap, and its
+    six named integrations (PioneerRx, Liberty RXQ, DRX, RelayHealth, CPESN, DHS
+    Immunization Gateway) are each enabled from inside the authenticated app with
+    credentials DocStation issues per customer.
+  evidence:
+  - url: https://docstation.co/sitemap.xml
+    status: 200
+  - url: https://docstation.co/openapi.json
+    status: 404
+  - url: https://help.docstation.co/en/articles/4169699-enabling-integrations
+    status: 200
+  checked: '2026-08-10'
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-10'
+  status: enriched
+  artifacts_added: 7
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence

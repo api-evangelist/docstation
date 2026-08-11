@@ -1,0 +1,70 @@
+generated: '2026-08-10'
+method: searched
+source: https://docstation.co/blog/category/changelog-releases
+scheme: quarterly product changelog published as dated blog posts
+url: https://docstation.co/blog/category/changelog-releases
+also_published_at: https://help.docstation.co/en/collections/14748591-product-updates
+current_version: null
+version_scheme: none
+notes: >-
+  DocStation publishes a dated product changelog as a "Changelog & Releases" blog
+  category, on a roughly quarterly cadence, plus a "Product Updates" collection in
+  the help center. There is no API version number, no semantic version, and no
+  breaking-change notice — the changelog describes application features, not an
+  API contract, because DocStation publishes no public developer API.
+entries:
+- title: 'Changelog and Releases: Q1 2026'
+  date: '2026-04-03'
+  url: https://docstation.co/blog/changelog-and-releases-q1-2026
+  version: null
+  breaking: false
+  highlights:
+  - UCare Minnesota program launched with on-demand CMR task generation
+  - Remittance tab moved from beta to general availability for all customers
+  - Prescriber-to-rendering-provider template function for BIN-billed claims
+  - ERA enrollments auto-approved when a matching clearinghouse ERA is received
+  - EDI enrollment status checks fully automated with daily runs
+  - Auto-submit control per location without rule duplication
+  - Claim reversal filtering by initiation date; additional bulk update fields
+  - Live calculator for units and billed amounts; project identifier tagging
+  - CSV import improvements (status messaging, date handling, address line 2)
+  - Medicare Part A-only coverage detection; HMO plan detection with override
+  - AI (internal alpha) claim auto-summary, "Query with AI" filter, Copilot custom
+    instructions
+- title: 'Changelog and Releases: Q4 2025'
+  date: '2026-01-09'
+  url: https://docstation.co/blog/changelog-and-releases-q4-2025
+  version: null
+  breaking: false
+  highlights:
+  - Quarterly release summary — described by DocStation as "one of DocStation's most
+    feature-rich quarters yet"
+- title: 'Changelog and Releases: Q3 2025'
+  date: '2025-10-01'
+  url: https://docstation.co/blog/changelog-and-releases-q3-2025
+  version: null
+  breaking: false
+  highlights:
+  - Quarterly release summary
+- title: "DocStation's Product Changelog and Release Notes"
+  date: '2023-08-02'
+  url: https://docstation.co/blog/docstations-product-changelog-and-release-notes
+  version: null
+  breaking: false
+  highlights:
+  - Announcement of the product changelog and release notes practice
+related_announcements:
+- title: 'DocStation Copilot: Your AI Billing Partner'
+  date: '2026-06-03'
+  url: https://docstation.co/blog/docstation-copilot-your-ai-billing-partner
+- title: 'Introducing Patient Billing: Collect Patient Payments Without Ever Leaving
+    DocStation'
+  date: '2026-06-01'
+  url: https://docstation.co/blog/introducing-patient-billing-collect-patient-payments-without-ever-leaving-docstation
+x-evidence:
+- url: https://docstation.co/blog/category/changelog-releases
+  http_status: 200
+  fetched: '2026-08-10'
+- url: https://docstation.co/blog/changelog-and-releases-q1-2026
+  http_status: 200
+  fetched: '2026-08-10'

@@ -1,0 +1,25 @@
+generated: '2026-08-10'
+method: searched
+source: https://docstation.co/legal/responsible-disclosure
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+notes: >-
+  DocStation publishes no API rate limits, because it publishes no public developer
+  API. The only public statement about rate limiting on the whole surface is in the
+  responsible-disclosure policy, which lists "Absence of rate limits" as an
+  out-of-scope vulnerability report — i.e. the company explicitly declines to treat
+  missing rate limits as a reportable issue. The marketing site, help center,
+  pricing page and legal pages were all searched on 2026-08-10 and none document a
+  request quota, window, burst, or any X-RateLimit-*/RateLimit-*/Retry-After
+  response header. This is an honest zero, not an unchecked field.
+x-evidence:
+- url: https://docstation.co/legal/responsible-disclosure
+  http_status: 200
+  fetched: '2026-08-10'
+  quote: 'Out-of-Scope Issues includes: "Absence of rate limits"'
+- url: https://docstation.co/pricing
+  http_status: 200
+  fetched: '2026-08-10'
+  note: Usage pricing is per-claim and percent-of-paid; no request quotas published.

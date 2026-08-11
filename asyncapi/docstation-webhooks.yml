@@ -1,0 +1,77 @@
+generated: '2026-08-10'
+method: searched
+source: https://help.docstation.co/en/articles/4169699-enabling-integrations
+asyncapi: null
+asyncapi_note: >-
+  DocStation publishes no AsyncAPI document. This file records the real, publicly
+  documented event/integration ingest surface found on its help center and in its
+  application bundle.
+direction: inbound
+pointer_emitted: false
+pointer_note: >-
+  NO `Webhooks` pointer is wired in apis.yml. The webhooks_advertised scoring check
+  reads an OUTBOUND event-delivery surface a developer can subscribe to. DocStation's
+  webhook host is the opposite — an INBOUND receiver that a partner pharmacy system
+  pushes into, using per-customer credentials DocStation issues inside the
+  application. There is no public subscription surface, no event catalog, no payload
+  schema, and no signing scheme published. Emitting the pointer would credit
+  DocStation with an event surface it does not offer to developers.
+endpoints:
+- name: PioneerRx dispensing data ingest
+  host: https://webhooks.docstation.co
+  path: /api/webhooks/pioneerrx/
+  direction: inbound
+  auth: HTTP Basic (Endpoint URL + Username + Password issued per customer inside
+    the DocStation app)
+  discovered_in: https://app.docstation.co/assets/index-B_GyHJX4.js
+  documented_at: https://help.docstation.co/en/articles/4169699-enabling-integrations
+  quote: >-
+    "select PioneerRx from the list of available integrations and you will be
+    provided an Endpoint URL, Username and Password. It is very important that you
+    save this information - PioneerRx will require these credentials to enable the
+    integration from their end."
+  payload_schema: null
+  signing: null
+integrations:
+- name: PioneerRx
+  kind: pharmacy management system
+  mechanism: DocStation-issued webhook endpoint + basic credentials, pushed by PioneerRx
+  credentials: Endpoint URL, Username, Password
+  prerequisite: signed Data Collection and Transfer Agreement
+- name: Liberty RXQ
+  kind: pharmacy management system
+  mechanism: DocStation pulls using a partner-issued API PIN
+  credentials: API PIN from Liberty settings
+  historical_import: true
+- name: DRX Pharmacy Software
+  kind: pharmacy management system
+  mechanism: DocStation pulls using a partner-issued API key
+  credentials: API key from DRX location settings plus org slug
+  historical_import: true
+- name: RelayHealth
+  kind: clearinghouse
+  mechanism: converts prescription claims to medical claims
+  credentials: not published
+- name: CPESN USA
+  kind: clinical network
+  mechanism: submission of Level 1 certified pharmacist eCare Plans
+  credentials: not published
+- name: DHS Immunization Gateway (IZG)
+  kind: state immunization registry
+  mechanism: bi-directional data feed for immunization queries and documentation
+  credentials: onboarding via DocStation Support (support@docstation.co)
+notes: >-
+  Every integration above is credentialed per customer and enabled from inside the
+  authenticated application. None of them is a developer API: there is no public
+  endpoint reference, no spec, no schema, and no self-serve key issuance. The
+  credentials in the Liberty and DRX rows are the PARTNER's credentials that a
+  pharmacy pastes into DocStation — they are not DocStation API keys.
+x-evidence:
+- url: https://help.docstation.co/en/articles/4169699-enabling-integrations
+  http_status: 200
+  fetched: '2026-08-10'
+- url: https://webhooks.docstation.co/
+  http_status: 200
+  content_type: text/html
+  fetched: '2026-08-10'
+  note: host resolves and serves an SPA shell; the ingest path itself is credentialed

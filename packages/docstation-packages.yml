@@ -1,0 +1,53 @@
+generated: '2026-08-10'
+method: searched
+source: npm, PyPI, RubyGems, crates.io, GitHub org github.com/DocStation
+package_count: 0
+official_sdk_count: 0
+packages: []
+notes: >-
+  DocStation publishes no client SDK in any public package registry. npm text
+  search for "docstation" returned zero packages; pypi.org/pypi/docstation/json,
+  rubygems.org/api/v1/gems/docstation.json and crates.io all miss. The company
+  GitHub organization github.com/DocStation (created 2017-01-24, blog
+  https://docstation.co, Austin TX) is real but holds ONE public repository —
+  `fixy`, a fixed-width file parser for Node.js, last pushed 2018-05-08 — which is
+  a general-purpose utility, not a client library for a DocStation API. The
+  upstream npm package `fixy` (latest 2.0.0, published 2025-07-25) is maintained at
+  github.com/SteveyPugs/fixy, not by DocStation. No `SDKs` or `Packages` pointer is
+  emitted in apis.yml: there is no first-party client library to point at.
+non_sdk_repositories:
+- name: fixy
+  url: https://github.com/DocStation/fixy
+  language: JavaScript
+  description: A fixed width file parser for Node.js
+  last_pushed: '2018-05-08'
+  official: true
+  sdk: false
+  note: >-
+    General-purpose utility, not an API client. The npm registry entry `fixy`
+    (version 2.0.0, published 2025-07-25) points its repository at
+    github.com/SteveyPugs/fixy — upstream, not DocStation.
+registries_probed:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=docstation
+  status: 200
+  results: 0
+- registry: pypi
+  url: https://pypi.org/pypi/docstation/json
+  status: 404
+- registry: rubygems
+  url: https://rubygems.org/api/v1/gems/docstation.json
+  status: 404
+- registry: crates.io
+  url: https://crates.io/api/v1/crates/docstation
+  status: 403
+  note: crates.io rejects unauthenticated agent requests; no DocStation crate is known
+x-evidence:
+- url: https://api.github.com/orgs/DocStation
+  http_status: 200
+  fetched: '2026-08-10'
+  note: 'public_repos: 1; blog: https://docstation.co'
+- url: https://registry.npmjs.org/fixy
+  http_status: 200
+  fetched: '2026-08-10'
+  note: latest 2.0.0 published 2025-07-25; repository github.com/SteveyPugs/fixy

@@ -1,0 +1,107 @@
+generated: '2026-08-10'
+method: searched
+source: https://docstation.co/pricing
+currency: USD
+billing_unit: per location
+plan_count: 3
+notes: >-
+  DocStation publishes a full public pricing page with two self-serve tiers and a
+  custom Enterprise tier. Pricing is location-centric with no per-user fees, plus
+  usage pricing on claims. These are SaaS product plans — DocStation publishes no
+  developer API and therefore no API plans, quotas, or API rate tiers.
+plans:
+- name: Lite
+  price: 129
+  currency: USD
+  period: month
+  unit: per location
+  tagline: Everything you need to run a modern pharmacy
+  contact_sales: false
+  usage_pricing:
+  - item: Pharmacy BIN billing (NCPDP D.0 to 837P)
+    price: 1.50
+    unit: per claim
+  - item: Standard medical claims
+    price: 10
+    unit: percent of paid
+  includes:
+  - Medical billing & claims
+  - Patient records & documentation
+  - eCare Plans (CPESN)
+  - Task management
+  - Reporting & analytics
+  - Online scheduling & SMS
+  - Dispensing integrations
+  - AI Copilot
+  - Priority support
+  limits:
+    per_user_fees: none
+    setup_fee: none
+- name: Plus
+  price: 249
+  currency: USD
+  period: month
+  unit: per location
+  tagline: Advanced features for growing pharmacies
+  contact_sales: false
+  most_popular: true
+  usage_pricing:
+  - item: Pharmacy BIN billing (NCPDP D.0 to 837P)
+    price: 0.99
+    unit: per claim
+  - item: Standard medical claims
+    price: 7.5
+    unit: percent of paid
+  includes:
+  - Everything in Lite
+  - Fee schedule management
+  - Performance dashboards
+  - Custom dashboard creation
+  - AI Copilot (Private Beta)
+  limits:
+    per_user_fees: none
+    setup_fee: none
+- name: Enterprise
+  price: null
+  currency: USD
+  period: custom
+  unit: per location
+  tagline: Custom solutions for pharmacy chains
+  contact_sales: true
+  usage_pricing:
+  - item: Pharmacy BIN billing (NCPDP D.0 to 837P)
+    price: null
+    unit: custom
+  - item: Standard medical claims
+    price: null
+    unit: custom
+  includes:
+  - Everything in Plus
+  - Custom usage rates
+  - Volume discounts
+  - Enhanced Support included
+  - Dedicated account manager
+  - Custom contracts & SLAs
+  - SSO & advanced security
+  - Custom training & onboarding
+  - Custom integrations
+  limits:
+    volume_pricing: available
+add_ons:
+- name: Enhanced Support
+  price: 299
+  currency: USD
+  period: month
+  includes:
+  - Prioritized support queue
+  - Direct support line
+  - Dedicated onboarding with bi-weekly meetings (2-3 months)
+  - Claims review
+  source: https://docstation.co/pricing
+x-evidence:
+- url: https://docstation.co/pricing
+  http_status: 200
+  fetched: '2026-08-10'
+  quote: >-
+    "Location-centric pricing with no per-user fees. Start at $129 for one
+    location, add more as you grow. No setup fees, no hidden costs."

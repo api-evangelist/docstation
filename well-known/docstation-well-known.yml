@@ -1,0 +1,125 @@
+generated: '2026-08-10'
+method: probed
+source: live HTTP probes of every DocStation host found in apis.yml and in the app bundle
+result: none
+notes: >-
+  No /.well-known/ document is served on any DocStation host. docstation.co returns
+  a real 404 for every path. app.docstation.co and webhooks.docstation.co are
+  single-page applications whose catch-all route answers 200 with the SPA HTML
+  shell for EVERY /.well-known/* path — those 200s are not documents and are
+  recorded as misses. No WellKnown or SecurityTxt pointer is emitted in apis.yml,
+  because a pointer would assert that DocStation serves this surface, and it does
+  not. DocStation's disclosure policy does exist, but as a legal page
+  (https://docstation.co/legal/responsible-disclosure), not as a security.txt.
+hosts:
+- host: https://docstation.co
+  type: marketing site
+  probes:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: https://app.docstation.co
+  type: application SPA (Aptible) — catch-all returns 200 HTML for every path
+  spa_catch_all: true
+  probes:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+- host: https://webhooks.docstation.co
+  type: integration webhook receiver — SPA catch-all returns 200 HTML for every path
+  spa_catch_all: true
+  probes:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+    note: SPA shell, not a document — treated as a miss
+- host: https://api.docstation.co
+  type: does not exist
+  probes:
+  - path: /
+    status: 0
+    file: null
+    note: NXDOMAIN — no api.docstation.co A record

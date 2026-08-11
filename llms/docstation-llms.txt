@@ -1,24 +1,60 @@
 # DocStation
 
-> DocStation is a unified pharmacy care and medical billing platform that helps community and clinical pharmacies bill insurance for the clinical services they already provide — vaccines, MTM, point-of-care testing, consultations, and DME. It consolidates patient records, medical claims, scheduling, messaging, workflow automation, and revenue analytics into one HIPAA-compliant, SOC 2 Type II system. No public API is documented at this time; this profile is maintained by the API Evangelist network.
+> DocStation is a unified pharmacy care and medical billing platform that helps community and clinical pharmacies bill insurance for the clinical services they already provide — vaccines, MTM, point-of-care testing, consultations, and DME. It consolidates patient records, medical claims, scheduling, messaging, workflow automation, and revenue analytics into one HIPAA-compliant, SOC 2 Type II system. DocStation publishes NO public developer API, no OpenAPI, no SDK, and no MCP server; its integrations are credentialed per customer and enabled from inside the authenticated application. This profile is maintained by the API Evangelist network and is not affiliated with DocStation.
 
 ## Product
 - [Platform overview](https://docstation.co/platform): Patient records, medical billing, smart scheduling, connected messaging, workflow automation, and live analytics.
-- [Pricing](https://docstation.co/pricing): Plan and pricing information.
+- [Features](https://docstation.co/features): Feature index.
+- [Pricing](https://docstation.co/pricing): Lite $129/mo per location, Plus $249/mo per location, Enterprise custom; usage priced per claim (BIN billing) and as a percentage of paid (standard medical claims); Enhanced Support add-on $299/mo.
 - [Get started / schedule a demo](https://docstation.co/get-started): Request a demo or start onboarding.
 - [Sign in](https://app.docstation.co): DocStation web application.
 
-## Docs & Support
-- [Help center](https://help.docstation.co): Getting started, training videos, medical billing, account management, advanced features, clinical programs, and product updates.
-- [Blog](https://docstation.co/blog): Company and product articles.
+## Clinical programs
+- [Vaccines](https://docstation.co/clinical/vaccines)
+- [MTM](https://docstation.co/clinical/mtm)
+- [Point of care](https://docstation.co/clinical/point-of-care)
+- [Test and treat](https://docstation.co/clinical/test-and-treat)
+- [DME](https://docstation.co/clinical/dme)
+- [CCM](https://docstation.co/clinical/ccm)
+- [RPM](https://docstation.co/clinical/rpm)
+- [Specialty](https://docstation.co/clinical/specialty)
+- [Sexual and reproductive health](https://docstation.co/clinical/sexual-health)
 
-## Trust & Status
+## Docs & Support
+- [Help center](https://help.docstation.co/en/): Getting started, training videos, medical billing, account management, advanced features, clinical programs, and product updates.
+- [Getting started with DocStation](https://help.docstation.co/en/collections/2461790-getting-started-with-docstation)
+- [Enabling integrations](https://help.docstation.co/en/articles/4169699-enabling-integrations): How PioneerRx, Liberty RXQ, DRX, RelayHealth, CPESN USA, and the DHS Immunization Gateway are connected — each with per-customer credentials issued in-app, not a public API.
+- [Product updates](https://help.docstation.co/en/collections/14748591-product-updates)
+- [Blog](https://docstation.co/blog): Company and product articles.
+- [Changelog and releases](https://docstation.co/blog/category/changelog-releases): Quarterly product changelog.
+
+## Integrations (no public API)
+DocStation has no developer portal, no API reference, no OpenAPI/GraphQL/AsyncAPI document, and no public endpoint catalog. Integration is arranged through DocStation support and the in-app integrations screen:
+- PioneerRx — DocStation issues an Endpoint URL, username and password; PioneerRx pushes dispensing data to `https://webhooks.docstation.co/api/webhooks/pioneerrx/`. Requires a signed Data Collection and Transfer Agreement.
+- Liberty RXQ — connected with an API PIN taken from Liberty's own settings.
+- DRX Pharmacy Software — connected with a DRX API key plus an org slug.
+- RelayHealth — clearinghouse; converts prescription claims to medical claims.
+- CPESN USA — submission of Level 1 certified pharmacist eCare Plans.
+- DHS Immunization Gateway (IZG) — bi-directional immunization feed; onboarding via support@docstation.co.
+
+## Trust, security & status
 - [Trust center](https://trust.docstation.co): Security and compliance posture (HIPAA, SOC 2 Type II).
-- [System status](https://status.docstation.co): Live platform status.
+- [Responsible disclosure policy](https://docstation.co/legal/responsible-disclosure): Report to security@docstation.co. Cash-and-prizes bounty; in-scope is app.docstation.co only. No /.well-known/security.txt is served.
+- [System status](https://status.docstation.co): Hyperping status page covering the marketing site, application, BIN billing, clearinghouse integration, data ingestion, login, patient search, and public scheduling.
 
 ## Legal
+- [Legal index](https://docstation.co/legal)
 - [Terms of service](https://docstation.co/legal/terms-of-service)
 - [Privacy policy](https://docstation.co/legal/privacy-policy)
+- [Business associate agreement](https://docstation.co/legal/business-associate-agreement)
+- [Add-on service terms](https://docstation.co/legal/addon-service-terms)
+- [Medicare addendum](https://docstation.co/legal/medicare-addendum)
+
+## Company
+- [About](https://docstation.co/about)
+- [Careers](https://docstation.co/careers)
+- [Press](https://docstation.co/press)
+- [GitHub organization](https://github.com/DocStation): One public repository (`fixy`, a Node.js fixed-width parser, last pushed 2018). No SDKs.
 
 ## Network artifacts
 - [APIs.json profile](https://raw.githubusercontent.com/api-evangelist/docstation/refs/heads/main/apis.yml): API Evangelist network profile for DocStation.

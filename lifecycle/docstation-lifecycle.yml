@@ -1,13 +1,50 @@
-generated: '2026-07-18'
+generated: '2026-08-10'
 method: searched
 source: https://docstation.co/
 status_page: https://status.docstation.co
-product_updates: https://help.docstation.co
+status_page_provider: Hyperping
+status_page_components:
+- DocStation Marketing Site
+- DocStation Application
+- BIN Billing
+- Clearinghouse Integration
+- Data Ingestion
+- Login Page
+- Patient Search
+- Public Scheduling
+status_page_feed: null
+status_page_feed_note: >-
+  Hyperping page exposes a /history view but publishes no RSS/Atom feed or JSON
+  status endpoint that a machine can subscribe to.
+product_updates: https://help.docstation.co/en/collections/14748591-product-updates
+changelog: https://docstation.co/blog/category/changelog-releases
+changelog_cadence: quarterly
+changelog_artifact: changelog/docstation-changelog.yml
 versioning: null
+versioning_note: >-
+  No version scheme is published. The site footer carries a "DocStation_v2.0"
+  string, which is branding on the marketing site, not an API or product version.
 deprecation: null
+deprecation_note: >-
+  No deprecation or sunset policy is published, and no RFC 8594 Deprecation/Sunset
+  header practice is documented. No `Deprecation` pointer is emitted.
 sla: null
+sla_note: >-
+  Custom SLAs are named as an Enterprise-tier benefit on the pricing page ("Custom
+  contracts & SLAs") but no SLA document or uptime commitment is published.
 notes: >-
-  DocStation publishes a public system-status page (status.docstation.co) and a
-  "Product Updates" section in its help center, but no dated changelog entries,
-  versioning policy, or deprecation/Sunset policy were found on the public
-  surface. No public API means no OpenAPI-derived deprecated operations.
+  Upgraded 2026-08-10: the status page was resolved to a Hyperping instance with
+  eight named components, and the quarterly changelog was located at
+  /blog/category/changelog-releases (previously recorded as "no dated changelog
+  entries found"). Still no versioning policy, no deprecation policy, and no
+  published SLA. No public API means no OpenAPI-derived deprecated operations.
+x-evidence:
+- url: https://status.docstation.co/
+  http_status: 200
+  fetched: '2026-08-10'
+- url: https://docstation.co/blog/category/changelog-releases
+  http_status: 200
+  fetched: '2026-08-10'
+- url: https://docstation.co/pricing
+  http_status: 200
+  fetched: '2026-08-10'
