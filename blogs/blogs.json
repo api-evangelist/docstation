@@ -9,13 +9,13 @@
       "method": "feed"
     },
     {
-      "source": "https://help.docstation.co",
-      "feed_url": "https://help.docstation.co/feed.xml",
+      "source": "https://github.com/DocStation",
+      "feed_url": "https://github.com/DocStation",
       "title": "",
       "saved": 0,
-      "method": "discovered"
+      "method": "none"
     }
   ],
-  "post_count": 25,
-  "fetched": "2026-08-06T14:08:46Z"
+  "post_count": 26,
+  "fetched": "2026-08-15T12:22:01Z"
 }
