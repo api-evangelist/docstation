@@ -13,6 +13,17 @@ description: >-
   immunization registries. DocStation is HIPAA compliant and SOC 2 Type II
   audited. Backed by Techstars; added to the API Evangelist network and enriched
   from its public surface. No public developer API is documented at this time.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
